@@ -112,7 +112,7 @@ def activity(selected_user, df):
 def activity_heatmap(selected_user,df):
 
     if selected_user != 'Overall':
-        df = df[df['user'] == selected_user]
+        df = df[df['users'] == selected_user]
 
     user_heatmap = df.pivot_table(index='day_name', columns='period', values='messages', aggfunc='count').fillna(0)
 
